@@ -9,6 +9,33 @@ import (
 )
 
 /**
+ * Possible means of death
+ */
+const (
+	MODBlaster = iota
+	MODShotgun
+	MODSuperShotgun
+	MODMachinegun
+	MODChaingun
+	MODHandGrenade
+	MODGrenadeLauncher
+	MODHyperBlaster
+	MODRocketLauncher
+	MODRailgun
+	MODBigFuckingGun
+	MODFall
+	MODDrown
+	MODSquish
+)
+
+type Frag struct {
+	Attacker     string
+	Victim       string
+	MeansOfDeath int
+	Suicide      bool
+}
+
+/**
  * Regex patterns for matching frags
  */
 type FragPatterns struct {
